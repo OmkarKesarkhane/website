@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import styles from "./Logo.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 import Header from "../Header/Header";
@@ -7,7 +7,7 @@ import { portfolioContext } from "../../Context/context";
 import { SET_DRAWER } from "../../Context/actionTypes";
 
 function Logo() {
-  const { state, dispatch } = useContext(portfolioContext);
+  const { dispatch } = useContext(portfolioContext);
 
   const handleClick = (e) => {
     e.preventDefault();

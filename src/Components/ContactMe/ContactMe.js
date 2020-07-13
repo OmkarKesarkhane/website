@@ -15,8 +15,9 @@ function ContactMe() {
         <p className={styles.letsConnect}>Lets Connect!</p>
 
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=omkesarkhane@gmail.com"
+          href="omkesarkhane@gmail.com"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
         >
           <div class={styles.emailContainer}>
@@ -29,6 +30,7 @@ function ContactMe() {
         <a
           href="https://www.linkedin.com/in/omkar-kesarkhane-ba5611186"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
         >
           <div class={styles.emailContainer}>
@@ -41,6 +43,7 @@ function ContactMe() {
         <a
           href="https://github.com/OmkarKesarkhane/"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
         >
           <div class={styles.emailContainer}>

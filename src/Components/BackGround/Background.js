@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Background.module.scss";
-import bottomright from "./bottomBlueCenter.png";
-import bottomcenter from "./bottomBlue.png";
 
 function Background() {
   return (

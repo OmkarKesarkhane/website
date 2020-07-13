@@ -1,22 +1,19 @@
 import React, { useContext } from "react";
 import styles from "./Header.module.scss";
-import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { portfolioContext } from "../../Context/context";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import { SET_DRAWER } from "../../Context/actionTypes";
 
 function Header() {
   const { state, dispatch } = useContext(portfolioContext);
 
-  let width, cross, display;
+  let width, display;
   if (state.drawer === true) {
     width = "100%";
-    cross = "25";
     display = "block";
   } else {
     width = "0%";
-    cross = "0";
     display = "none";
   }
 
