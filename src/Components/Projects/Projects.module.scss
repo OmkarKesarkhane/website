@@ -1,0 +1,46 @@
+@import "../../SCSS//mixins";
+@import "../../SCSS//variables";
+
+.desktop {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 20px auto;
+
+  @include Desktop() {
+    grid-area: title;
+    justify-self: center;
+  }
+  .skills {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $subhead1;
+    color: $darkColor;
+
+    @include Desktop() {
+      font-size: $subhead1 * 1.5;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+  }
+  .line {
+    width: 40%;
+    background-color: $baseColor;
+    height: 2px;
+    padding: 0;
+    margin: 0;
+  }
+}

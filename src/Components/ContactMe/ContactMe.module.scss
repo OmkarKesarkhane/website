@@ -1,0 +1,78 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/mixins";
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include Desktop() {
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+    grid-area: title;
+    justify-self: center;
+  }
+  .skills {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $subhead1;
+    color: $darkColor;
+    margin: 0;
+
+    @include Desktop() {
+      font-size: $subhead1 * 1.5;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+  }
+  .line {
+    width: 60%;
+    background-color: $baseColor;
+    height: 2px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.letsConnect {
+  font-size: $subhead3 * 1.5;
+  padding: 0;
+  margin: 0;
+  color: $redColor;
+  margin: 10px;
+}
+.thankYou {
+  font-size: $subhead3;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height: $subhead3 * 1.4;
+  color: $darkColor;
+}
+
+.emailContainer {
+  width: 200px;
+  margin: 15px 0;
+  border: 1px solid $baseColor;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .email {
+    font-size: $subhead3;
+    padding: 10px;
+  }
+
+  .icon {
+    padding-left: 22%;
+  }
+}

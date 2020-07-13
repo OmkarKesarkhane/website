@@ -1,0 +1,57 @@
+@import "./SCSS/_variables.scss";
+@import "./SCSS/mixins";
+body {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: url("./Images/topBlue.png") top right / 30% no-repeat,
+    url("./Images/leftBlue.png") 0% 140% / 30% no-repeat,
+    url("./Images/rightYello.png") 100% 100% / 10% no-repeat;
+  @include Mobile() {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: url("./Images/topBlue.png") 120% 0%/ 60% no-repeat,
+      url("./Images/leftBlue.png") 0px 20% / 30% no-repeat;
+  }
+}
+
+.MyTransitionAppear,
+.MyTransitionEnter {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(-100%);
+}
+.MyTransitionAppearActive,
+.MyTransitionEnter.MyTransitionEnterActive {
+  position: absolute;
+  opacity: 1;
+  transform: translateX(0%);
+
+  transition: all 200ms linear 100ms;
+}
+
+.MyTransitionExit {
+  position: absolute;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.MyTransitionExit.MyTransitionExitActive {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 80ms linear;
+}
+
+html {
+  font-size: 65.5%;
+}
+
+// background: url(./bottomBlue.png) 5% 45%/ 200px no-repeat,
+// url(./topDark.png) 90% 0%/ 50% no-repeat;
+// animation: backk 5s 0s linear infinite alternate-reverse;

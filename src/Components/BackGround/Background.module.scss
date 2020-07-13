@@ -1,0 +1,179 @@
+@import "../../SCSS/mixins";
+@import "../../SCSS//variables";
+
+$rl: 0%;
+$tb: 0%;
+
+.back {
+  height: fit-content;
+  margin: 0 auto;
+  padding: 15% 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include Desktop() {
+    padding-top: 10%;
+  }
+  .head {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+
+    .hello {
+      padding-top: 25px;
+      justify-self: flex-start;
+      align-self: flex-start;
+      font-size: $head2;
+      color: #58586d;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      margin: 0;
+
+      @include Desktop() {
+        font-size: $head1;
+      }
+    }
+    .name {
+      padding-top: 5px;
+      justify-self: flex-start;
+      align-self: flex-start;
+      font-size: 3.5rem;
+      color: #2e2f58;
+      text-align: left;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 5px;
+      margin: 0;
+
+      @include Desktop() {
+        font-size: 8.2rem;
+        letter-spacing: 5px;
+      }
+    }
+    .dev {
+      padding-top: 20px;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: #f56b6b;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 2px;
+      text-align: left;
+
+      @include Desktop() {
+        font-size: $subhead2;
+      }
+    }
+  }
+}
+.button {
+  padding-top: 30px;
+  display: flex;
+  .Workbtn {
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: 150px;
+    height: 50px;
+    font-size: 1.6rem;
+    font-family: roboto;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgb(194, 194, 194);
+    border: 1px solid $baseColor;
+    z-index: 2;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom, $redColor, rgb(89, 26, 236));
+    margin-right: 5px;
+  }
+  .Workbtn:hover {
+    background-image: linear-gradient($baseColor, $baseColor);
+    color: #ffffff;
+  }
+}
+.Aboutbtn {
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 150px;
+  height: 50px;
+  font-size: 1.6rem;
+  font-family: roboto;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+  color: $darkColor;
+  box-shadow: 0px 0px 0px rgb(194, 194, 194);
+  border: 1px solid $baseColor;
+  z-index: 2;
+  border-radius: 25px;
+}
+.Aboutbtn:hover {
+  color: $baseColor;
+}
+// .bottomShapes {
+//   width: 100%;
+//   .bottomRight {
+//     position: relative;
+//     right: 20%;
+//     filter: opacity(0.2) hue-rotate(15deg) drop-shadow(0px 0px 10px #2c08556c);
+
+//     animation: bottomCenter 7s 0s linear infinite alternate-reverse;
+//   }
+//   .bottomCenter {
+//     position: relative;
+//     left: 0%;
+//     bottom: 100px;
+//     width: 100px;
+//     filter: opacity(0.5) drop-shadow(0px 0px 10px #2f2070);
+//     animation: bottomRight 10s 0s linear infinite alternate-reverse;
+//   }
+// }
+// @keyframes bottomCenter {
+//   0% {
+//     position: relative;
+//     right: 20%;
+//   }
+//   50% {
+//     position: relative;
+//     right: 25%;
+//     transform: rotateX(10deg);
+//   }
+// }
+// @keyframes bottomRight {
+//   0% {
+//     left: 0%;
+//     bottom: 100px;
+//     width: 100px;
+//     filter: opacity(0.5) drop-shadow(0px 0px 10px #2f2070);
+//   }
+//   50% {
+//     position: relative;
+//     left: 5%;
+//     bottom: 90px;
+//     right: 50px;
+//     width: 90px;
+//     filter: opacity(0.2) drop-shadow(0px 0px 10px #2f2070);
+//   }
+// }
+
+// .bottomRight {
+//   padding: 0px;
+// }
+// .home {
+//   background: url(./bottomBlue.png) 5% 45%/ 200px no-repeat,
+//     url(./topDark.png) 90% 0%/ 50% no-repeat;
+//   animation: backk 5s 0s linear infinite alternate-reverse;
+// }
+
+// @keyframes backk {
+//   0% {
+//     background: url(./bottomBlue.png) 5% 45%/ 200px no-repeat,
+//       url(./topDark.png) 90% 0%/ 50% no-repeat;
+//   }
+//   50% {
+//     background: url(./bottomBlue.png) 5% 50%/ 230px no-repeat,
+//       url(./topDark.png) 90% 0%/ 45% no-repeat;
+//   }
+// }
