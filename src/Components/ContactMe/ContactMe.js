@@ -13,6 +13,7 @@ function ContactMe() {
         </div>
         <p className={styles.thankYou}>Thank You for viewing my work.</p>
         <p className={styles.letsConnect}>Lets Connect!</p>
+
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=omkesarkhane@gmail.com"
           target="_blank"

@@ -1,47 +1,181 @@
 @import "../../SCSS/variables";
+@import "../../SCSS/mixins";
 
-.sliderContainer {
+// position: absolute;
+// width: 100%;
+// top: 0;
+// right: 0;
+// height: 300px;
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// background-color: #ffffff;
+// align-items: center;
+.drawerAppear,
+.drawerEnter {
   position: absolute;
-  top: 0px;
+  width: 0;
+  top: 0;
   right: 0;
-  height: 300px;
-  background-color: #ffffff;
-  transition: all 0.8s;
-  border-radius: 20px;
+  height: 0;
+  opacity: 0;
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 20px grey;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 50%;
+}
+.drawerAppearActive,
+.drawerEnterActive {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 300px;
+  opacity: 1;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  transition: all 300ms linear;
+  box-shadow: 0 0 10px gray;
 
-  .sliderList {
-    margin: 0;
-    padding: 0;
-    margin: 5%;
-    letter-spacing: 2px;
-    list-style-type: none;
+  border-radius: 0;
+}
 
-    li {
-      margin: 15px 0;
-      padding-left: 5px;
-      font-size: $subhead3;
-      color: $darkColor;
-      height: 30px;
-      border-bottom: 1px solid rgb(132, 132, 134);
-    }
-    Link {
-      text-decoration: none;
-    }
-    li:hover {
-      transform: scale(1.05);
-      color: rgb(247, 247, 247);
-    }
+.drawerEnterDone {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 300px;
+  opacity: 1;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px gray;
+  align-items: center;
+  border-radius: 0px;
+}
+
+.drawerExit {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 300px;
+  opacity: 1;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px gray;
+  align-items: center;
+  border-radius: 0px;
+}
+.drawerExitActive {
+  position: absolute;
+  width: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 300ms linear;
+}
+
+.line1Appear,
+.line1Enter {
+  opacity: 0;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+}
+.line1AppearActive,
+.line1EnterActive {
+  opacity: 1;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+  transform: rotate(-50deg) translate(-10px, -2px);
+  transition: transform 500ms linear 400ms;
+}
+.line1EnterDone {
+  opacity: 1;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+  transform: rotate(-50deg) translate(-10px, -2px);
+}
+
+.line2Appear,
+.line2Enter {
+  opacity: 0;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+}
+.line2AppearActive,
+.line2EnterActive {
+  opacity: 1;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+  transform: rotate(45deg) translate(-10px, 0px);
+  transition: transform 500ms linear;
+}
+.line2EnterDone {
+  opacity: 1;
+  width: 25px;
+  height: 2px;
+  background-color: $darkColor;
+  transform: rotate(45deg) translate(-10px, 0px);
+}
+
+.sliderList {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  list-style-type: none;
+
+  li {
+    margin: 15px 0;
+    padding-left: 5px;
+    font-size: $subhead3;
+    color: $darkColor;
+    height: 30px;
+    border-bottom: 1px solid rgb(194, 194, 196);
   }
-
-  .crossContainer {
-    justify-self: right;
-    align-self: flex-end;
-    padding: 15px;
-    float: right;
-    transition: all 5s;
+  Link {
+    text-decoration: none;
   }
+  li:hover {
+    transform: scale(1.05);
+    color: rgb(247, 247, 247);
+  }
+}
+
+.crossContainer {
+  justify-self: right;
+  align-self: flex-end;
+  padding: 15px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  height: 15px;
+  justify-content: space-between;
+  margin-top: -20px;
 }

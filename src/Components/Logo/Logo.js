@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Logo.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
+import { portfolioContext } from "../../Context/context";
+import { SET_DRAWER } from "../../Context/actionTypes";
+
 function Logo() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const { state, dispatch } = useContext(portfolioContext);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    dispatch({
+      type: SET_DRAWER,
+      payload: true,
+    });
+  };
 
   return (
     <div className={styles.head}>
@@ -39,12 +51,12 @@ function Logo() {
       </div>
       <div className={styles.menu}>
         <AiOutlineMenu
-          onClick={() => setOpenMenu(true)}
+          onClick={(e) => handleClick(e)}
           className={styles.icon}
           size={30}
         ></AiOutlineMenu>
       </div>
-      <Header slider={openMenu}></Header>
+      <Header></Header>
     </div>
   );
 }

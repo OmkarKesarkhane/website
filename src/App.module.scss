@@ -1,8 +1,6 @@
 @import "./SCSS/_variables.scss";
 @import "./SCSS/mixins";
 body {
-  height: 100vh;
-  overflow: hidden;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -10,8 +8,6 @@ body {
     url("./Images/leftBlue.png") 0% 140% / 30% no-repeat,
     url("./Images/rightYello.png") 100% 100% / 10% no-repeat;
   @include Mobile() {
-    height: 100vh;
-    overflow: hidden;
     padding: 0;
     margin: 0;
     background: url("./Images/topBlue.png") 120% 0%/ 60% no-repeat,
@@ -31,7 +27,6 @@ body {
   position: absolute;
   opacity: 1;
   transform: translateX(0%);
-
   transition: all 200ms linear 100ms;
 }
 
