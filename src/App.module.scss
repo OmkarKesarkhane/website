@@ -3,15 +3,15 @@
 body {
   padding: 0;
   margin: 0;
+  height: auto;
   font-family: "Roboto", sans-serif;
   background: url("./Images/topBlue.png") top right / 30% no-repeat,
-    url("./Images/leftBlue.png") 0% 140% / 30% no-repeat,
-    url("./Images/rightYello.png") 100% 100% / 10% no-repeat;
+    url("./Images/leftBlue.png") top left / 30% no-repeat;
   @include Mobile() {
     padding: 0;
     margin: 0;
-    background: url("./Images/topBlue.png") 120% 0%/ 60% no-repeat,
-      url("./Images/leftBlue.png") 0px 20% / 30% no-repeat;
+    background: url("./Images/topBlue.png") top right/ 60% no-repeat,
+      url("./Images/leftBlue.png") center left / 30% no-repeat;
   }
 }
 
@@ -40,13 +40,10 @@ body {
   position: absolute;
   opacity: 0;
   transform: translateX(100%);
-  transition: all 80ms linear;
+  transition: all 0ms linear;
 }
 
 html {
   font-size: 65.5%;
 }
-
-// background: url(./bottomBlue.png) 5% 45%/ 200px no-repeat,
-// url(./topDark.png) 90% 0%/ 50% no-repeat;
-// animation: backk 5s 0s linear infinite alternate-reverse;
+// url("./Images/rightYello.png") 100% 100% / 10% no-repeat;

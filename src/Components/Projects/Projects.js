@@ -8,6 +8,10 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import zomato from "../../Images/projects/Zomato.png";
+import organiser from "../../Images/projects/pro-organiser.jpg";
+import FinancePortfolio from "../../Images/projects/FinancePortfolio.png";
+import expenseTracker from "../../Images/projects/ExpenseTracker.png";
 
 const useStyles = makeStyles({
   root: {
@@ -16,7 +20,7 @@ const useStyles = makeStyles({
     margin: 10,
   },
   media: {
-    height: 140,
+    height: 180,
   },
 });
 
@@ -33,25 +37,39 @@ function Projects() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={zomato}
               title="Contemplative Reptile"
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                Lizard
+                Zomato Landing Page
               </Typography>
               <Typography variant="body3" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                It is Responsive web design of Zomato Landing page.<br></br>{" "}
+                stack : HTML, CSS, SASS
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="medium" color="primary">
-              Share
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://omkarkesarkhane.github.io/zomato-replica/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View{" "}
+              </a>
             </Button>
             <Button size="medium" color="primary">
-              Learn More
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/OmkarKesarkhane/zomato-replica"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Github
+              </a>
             </Button>
           </CardActions>
         </Card>
@@ -59,25 +77,38 @@ function Projects() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
+              image={FinancePortfolio}
+              title="Finance Portfolio"
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                Lizard
+                Finance Portfolio Application
               </Typography>
               <Typography variant="body3" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                stack: React, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="medium" color="primary">
-              Share
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://omkarkesarkhane.github.io/financial-portfolio-tracker-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </a>
             </Button>
             <Button size="medium" color="primary">
-              Learn More
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/OmkarKesarkhane/financial-portfolio-tracker-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Github
+              </a>
             </Button>
           </CardActions>
         </Card>
@@ -85,25 +116,40 @@ function Projects() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
+              image={organiser}
+              title="pro-organiser"
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                Lizard
+                Pro-Organiser
               </Typography>
+
               <Typography variant="body3" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                Web App with authentication, creating, updating, deleting tasks
+                & members. <br></br>Stack : React, Redux, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="medium" color="primary">
-              Share
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://omkarkesarkhane.github.io/pro-organiser-app-redux/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </a>
             </Button>
             <Button size="medium" color="primary">
-              Learn More
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/OmkarKesarkhane/pro-organiser-app-redux"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Github
+              </a>
             </Button>
           </CardActions>
         </Card>
@@ -111,25 +157,39 @@ function Projects() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
+              image={expenseTracker}
+              title="Expense Tracker"
+              style={{ height: 200 }}
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                Lizard
+                Expense Tracker Application
               </Typography>
               <Typography variant="body3" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                stack : React, React-hooks, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="medium" color="primary">
-              Share
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://omkarkesarkhane.github.io/expense-tracker-react-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </a>
             </Button>
             <Button size="medium" color="primary">
-              Learn More
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/OmkarKesarkhane/Expense-Tracker-React-App"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Github
+              </a>
             </Button>
           </CardActions>
         </Card>
