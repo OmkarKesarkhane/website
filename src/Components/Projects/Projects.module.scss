@@ -9,6 +9,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
+  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 }
 
 .skillsWrapper {
@@ -17,7 +19,7 @@
   justify-content: center;
   align-items: flex-start;
   width: fit-content;
-  margin: 20px auto;
+  margin: 15px auto;
 
   @include Desktop() {
     grid-area: title;
@@ -27,7 +29,7 @@
     width: fit-content;
     margin: 0 auto;
     text-align: center;
-    font-size: $subhead1;
+    font-size: 20pt;
     color: $darkColor;
 
     @include Desktop() {
@@ -38,7 +40,7 @@
   }
   .line {
     width: 40%;
-    background-color: $baseColor;
+    background-color: $darkColor;
     height: 2px;
     padding: 0;
     margin: 0;

@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
+  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
+  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 
   @include Desktop() {
     margin-top: 20px;
@@ -30,6 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin: 15px auto;
 
     @include Desktop() {
       grid-area: title;
@@ -39,7 +42,7 @@
       width: fit-content;
       margin: 0 auto;
       text-align: center;
-      font-size: $subhead1;
+      font-size: 20pt;
       color: $darkColor;
 
       @include Desktop() {
@@ -50,7 +53,7 @@
     }
     .line {
       width: 40%;
-      background-color: $baseColor;
+      background-color: $darkColor;
       height: 2px;
       padding: 0;
       margin: 0;
@@ -151,27 +154,36 @@
   .contactbtn {
     justify-self: flex-start;
     align-self: flex-start;
-    width: 150px;
-    height: 50px;
+    width: 130px;
+    height: 45px;
     font-size: 1.6rem;
     font-family: roboto;
     letter-spacing: 1px;
     background-color: transparent;
-    color: #ffffff;
+    color: $darkColor;
     box-shadow: 0px 0px 10px rgb(194, 194, 194);
-    border: 1px solid $baseColor;
+    border: none;
     z-index: 2;
     border-radius: 25px;
     background-image: linear-gradient(
       to bottom,
-      $baseColor,
-      rgba(26, 177, 236, 0.8)
+      rgb(8, 241, 152),
+      rgb(48, 220, 250)
     );
-    margin-right: 5px;
+    margin-right: 15px;
+    @include Desktop() {
+      width: 150px;
+      height: 50px;
+    }
   }
+
   .resumebtn:hover,
   .contactbtn:hover {
     background-image: linear-gradient($baseColor, $baseColor);
     color: #ffffff;
   }
+}
+
+a {
+  text-decoration: none;
 }

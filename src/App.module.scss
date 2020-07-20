@@ -3,10 +3,11 @@
 body {
   padding: 0;
   margin: 0;
-  height: auto;
+  height: 100vh;
+  overflow: auto;
   font-family: "Roboto", sans-serif;
   background: url("./Images/topBlue.png") top right / 30% no-repeat,
-    url("./Images/leftBlue.png") top left / 30% no-repeat;
+    url("./Images/leftBlue.png") center left / 30% no-repeat;
   @include Mobile() {
     padding: 0;
     margin: 0;

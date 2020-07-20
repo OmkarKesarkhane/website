@@ -12,6 +12,8 @@ $tb: 0%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
+  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 
   @include Desktop() {
     padding-top: 10%;
@@ -26,7 +28,7 @@ $tb: 0%;
       padding-top: 25px;
       justify-self: flex-start;
       align-self: flex-start;
-      font-size: $head2;
+      font-size: $subhead2;
       color: #58586d;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
@@ -40,7 +42,8 @@ $tb: 0%;
       padding-top: 5px;
       justify-self: flex-start;
       align-self: flex-start;
-      font-size: 3.5rem;
+      font-size: 3.8rem;
+      font-weight: 300;
       color: #2e2f58;
       text-align: left;
       font-family: "Montserrat", sans-serif;
@@ -53,10 +56,10 @@ $tb: 0%;
       }
     }
     .dev {
-      padding-top: 20px;
-      font-size: 2.2rem;
+      padding-top: 10px;
+      font-size: 2rem;
       font-weight: 300;
-      color: #f56b6b;
+      color: #646469;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
       margin: 0;
@@ -72,22 +75,37 @@ $tb: 0%;
 .button {
   padding-top: 30px;
   display: flex;
+  @include Desktop() {
+    padding-top: 50px;
+  }
   .Workbtn {
     justify-self: flex-start;
     align-self: flex-start;
-    width: 150px;
+    width: 130px;
     height: 50px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: roboto;
     letter-spacing: 1px;
     background-color: transparent;
-    color: #ffffff;
-    box-shadow: 0px 0px 10px rgb(194, 194, 194);
-    border: 1px solid $baseColor;
+    color: $darkColor;
+    box-shadow: 0px 0px 8px rgb(165, 165, 165);
+    border: none;
     z-index: 2;
     border-radius: 25px;
-    background-image: linear-gradient(to bottom, $redColor, rgb(89, 26, 236));
-    margin-right: 5px;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(8, 241, 152),
+      rgb(48, 220, 250)
+    );
+    margin-right: 15px;
+  }
+  @include Desktop() {
+    .Workbtn {
+      width: 150px;
+      height: 50px;
+      color: $darkColor;
+      font-size: 1.6rem;
+    }
   }
   .Workbtn:hover {
     background-image: linear-gradient($baseColor, $baseColor);
@@ -97,20 +115,28 @@ $tb: 0%;
 .Aboutbtn {
   justify-self: flex-start;
   align-self: flex-start;
-  width: 150px;
+  width: 130px;
   height: 50px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: roboto;
   letter-spacing: 1px;
   background-color: #ffffff;
   color: $darkColor;
-  box-shadow: 0px 0px 0px rgb(194, 194, 194);
+  box-shadow: 0px 0px 5px rgb(194, 194, 194);
   border: 1px solid $baseColor;
   z-index: 2;
   border-radius: 25px;
 }
 .Aboutbtn:hover {
   color: $baseColor;
+}
+
+@include Desktop() {
+  .Aboutbtn {
+    width: 150px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
 }
 // .bottomShapes {
 //   width: 100%;

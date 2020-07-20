@@ -6,12 +6,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
+  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 }
 .skillsWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: fit-content;
+  margin: 15px auto;
 
   @include Desktop() {
     margin-top: 25px;
@@ -24,7 +28,7 @@
     width: fit-content;
     margin: 0 auto;
     text-align: center;
-    font-size: $subhead1;
+    font-size: 20pt;
     color: $darkColor;
     margin: 0;
 
@@ -35,22 +39,22 @@
     }
   }
   .line {
-    width: 60%;
-    background-color: $baseColor;
+    width: 50%;
+    background-color: $darkColor;
     height: 2px;
     padding: 0;
     margin: 0;
   }
 }
 .letsConnect {
-  font-size: $subhead3 * 1.5;
+  font-size: 18pt;
   padding: 0;
   margin: 0;
   color: $redColor;
   margin: 10px;
 }
 .thankYou {
-  font-size: $subhead3;
+  font-size: 16pt;
   padding: 0;
   margin-top: 20px;
   margin-bottom: 5px;

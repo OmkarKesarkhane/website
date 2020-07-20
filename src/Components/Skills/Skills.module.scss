@@ -9,6 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
+  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 
   @include Desktop() {
     max-width: 1024px;
@@ -28,6 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin: 15px auto;
 
     @include Desktop() {
       margin: 25px;
@@ -39,7 +42,7 @@
       width: fit-content;
       margin: 0 auto;
       text-align: center;
-      font-size: $subhead1;
+      font-size: 20pt;
       color: $darkColor;
       margin: 0;
 
@@ -50,8 +53,8 @@
       }
     }
     .line {
-      width: 60%;
-      background-color: $baseColor;
+      width: 50%;
+      background-color: $darkColor;
       height: 2px;
       padding: 0;
       margin: 0;
@@ -108,11 +111,14 @@
   .code {
     font-size: $subhead3;
     padding: 5px;
-    margin: 15px 0 0;
+    margin: 0px 0;
     color: $redColor;
     @include Desktop() {
       font-size: $subhead2;
     }
+  }
+  .code {
+    margin-top: 15px;
   }
 }
 

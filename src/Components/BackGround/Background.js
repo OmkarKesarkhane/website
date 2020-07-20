@@ -8,10 +8,10 @@ function Background() {
         <div className={styles.head}>
           <p className={styles.hello}>Hello, I a'm</p>
           <p className={styles.name}>Omkar Kesarkhane</p>
-          <p className={styles.dev}>Frontend Developer / UI/UX designer</p>
+          <p className={styles.dev}>I Design and Code User Interfaces</p>
           <div className={styles.button}>
             <button className={styles.Workbtn}>View My Work</button>
-            <button className={styles.Aboutbtn}>Explore Me</button>
+            <button className={styles.Aboutbtn}>About Me</button>
           </div>
         </div>
       </div>

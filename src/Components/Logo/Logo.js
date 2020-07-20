@@ -20,11 +20,13 @@ function Logo() {
 
   return (
     <div className={styles.head}>
-      <Link to="/">
-        <div className={styles.logo}>
-          <p>Omkar Kesarkhane</p>
-        </div>
-      </Link>
+      <div>
+        <Link to="/">
+          <div className={styles.logo}>
+            <p>Omkar Kesarkhane</p>
+          </div>
+        </Link>
+      </div>
       <div className={styles.linkContainer}>
         <ul className={styles.listContainer}>
           <li>

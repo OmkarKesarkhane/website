@@ -5,6 +5,7 @@ import code from "../../Images/About/code.png";
 import responsive from "../../Images/About/responsive.png";
 import dynamic from "../../Images/About/dynamic.png";
 import testimonial from "../../Images/About/testimonial.png";
+import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
 
 const AboutMe = () => {
   return (
@@ -29,7 +30,11 @@ const AboutMe = () => {
         </p>
         <p className={styles.aboutText}>Want to know more about Me?</p>
         <div className={styles.btnContainer}>
-          <button className={styles.resumebtn}>My Resume</button>
+          <button className={styles.resumebtn}>
+            <a href={resume} target="_blank" rel="noopener noreferrer">
+              My Resume
+            </a>
+          </button>
           <button className={styles.contactbtn}>Contact Me</button>
         </div>
       </div>
