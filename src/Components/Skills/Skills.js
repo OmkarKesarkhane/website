@@ -10,6 +10,8 @@ import mat from "../../Images/Skills/Materialize.png";
 import git from "../../Images/Skills/Git.png";
 import angular from "../../Images/Skills/Angular.png";
 import figma from "../../Images/Skills/figma.png";
+import photoshop from "../../Images/Skills/photoshop.png";
+import xd from "../../Images/Skills/xd.png";
 
 function Skills() {
   return (
@@ -31,12 +33,17 @@ function Skills() {
             ></img>
           </div>
           <div className={styles.wrapper}>
-            <p></p>
-            <img className={styles.img} src={html} alt="HtmlLogo"></img>
+            <p>Adobe XD</p>
+            <img
+              className={styles.img}
+              style={{ width: "100%" }}
+              src={xd}
+              alt="HtmlLogo"
+            ></img>
           </div>
           <div className={styles.wrapper}>
-            <p></p>
-            <img className={styles.img} src={html} alt="HtmlLogo"></img>
+            <p>Photoshop</p>
+            <img className={styles.img} src={photoshop} alt="HtmlLogo"></img>
           </div>
         </div>
       </div>
