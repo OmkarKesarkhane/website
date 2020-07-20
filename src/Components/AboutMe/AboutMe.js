@@ -32,7 +32,7 @@ const AboutMe = () => {
           experiences into Code. I mainly focus on making websites responsive
           and to come up with best solutions with clean & efficient code.
           <br></br>I always want to learn & grow with upskilling myself as a
-          fullstack javascript developer with a keen eye in design .
+          fullstack Javascript developer with a keen eye in design .
         </p>
         <p className={styles.aboutText}>Want to know more about Me?</p>
         <div className={styles.btnContainer}>
