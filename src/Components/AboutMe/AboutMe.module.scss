@@ -177,7 +177,10 @@
     }
   }
 
-  .resumebtn:hover,
+  .resumebtn:hover {
+    background-image: linear-gradient($baseColor, $baseColor);
+    color: #ffffff;
+  }
   .contactbtn:hover {
     background-image: linear-gradient($baseColor, $baseColor);
     color: #ffffff;

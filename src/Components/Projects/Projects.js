@@ -174,7 +174,7 @@ function Projects() {
             <Button size="medium" color="primary">
               <a
                 style={{ textDecoration: "none" }}
-                href="https://omkarkesarkhane.github.io/expense-tracker-react-app/"
+                href="https://track-your-expenses.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >

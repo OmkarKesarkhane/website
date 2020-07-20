@@ -6,8 +6,14 @@ import responsive from "../../Images/About/responsive.png";
 import dynamic from "../../Images/About/dynamic.png";
 import testimonial from "../../Images/About/testimonial.png";
 import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
+import { useHistory } from "react-router";
 
 const AboutMe = () => {
+  const history = useHistory();
+  const handleContact = (e) => {
+    e.preventDefault();
+    history.push("/contact");
+  };
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.skillsWrapper}>
@@ -35,7 +41,12 @@ const AboutMe = () => {
               My Resume
             </a>
           </button>
-          <button className={styles.contactbtn}>Contact Me</button>
+          <button
+            onClick={(e) => handleContact(e)}
+            className={styles.contactbtn}
+          >
+            Contact Me
+          </button>
         </div>
       </div>
       <div className={styles.whatIDoContainer}>
