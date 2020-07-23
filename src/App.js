@@ -26,7 +26,7 @@ function App() {
             <TransitionGroup>
               <CSSTransition
                 key={location.pathname}
-                timeout={300}
+                timeout={500}
                 classNames={{
                   appear: styles.MyTransitionAppear,
                   appearActive: styles.MyTransitionAppearActive,

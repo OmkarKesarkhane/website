@@ -6,14 +6,14 @@ import responsive from "../../Images/About/responsive.png";
 import dynamic from "../../Images/About/dynamic.png";
 import testimonial from "../../Images/About/testimonial.png";
 import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 
 const AboutMe = () => {
-  const history = useHistory();
-  const handleContact = (e) => {
-    e.preventDefault();
-    history.push("/contact");
-  };
+  // const history = useHistory();
+  // const handleContact = (e) => {
+  //   e.preventDefault();
+  //   history.push("/contact");
+  // };
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.skillsWrapper}>
@@ -21,9 +21,9 @@ const AboutMe = () => {
         <p className={styles.line}></p>
       </div>
 
-      <div className={styles.imgContainer}>
+      {/* <div className={styles.imgContainer}>
         <img className={styles.img} alt="MyImage"></img>
-      </div>
+      </div> */}
       <div className={styles.aboutTextContainer}>
         <p className={styles.aboutText}>
           I am a Front End Developer and UI/UX designer based in INDIA.
@@ -34,19 +34,19 @@ const AboutMe = () => {
           <br></br>I always want to learn & grow with upskilling myself as a
           fullstack Javascript developer with a keen eye in design .
         </p>
-        <p className={styles.aboutText}>Want to know more about Me?</p>
+        {/* <p className={styles.aboutText}>Want to know more about Me?</p> */}
         <div className={styles.btnContainer}>
           <button className={styles.resumebtn}>
             <a href={resume} target="_blank" rel="noopener noreferrer">
               My Resume
             </a>
           </button>
-          <button
-            onClick={(e) => handleContact(e)}
-            className={styles.contactbtn}
-          >
-            Contact Me
-          </button>
+          {/* <button
+              onClick={(e) => handleContact(e)}
+              className={styles.contactbtn}
+            >
+              Contact Me
+            </button> */}
         </div>
       </div>
       <div className={styles.whatIDoContainer}>

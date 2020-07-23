@@ -1,16 +1,13 @@
 import React from "react";
 import styles from "./Background.module.scss";
 import { useHistory } from "react-router";
+import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
 
 function Background() {
   const history = useHistory();
   let handleWork = (e) => {
     e.preventDefault();
     history.push("/project");
-  };
-  let handleAboutMe = (e) => {
-    e.preventDefault();
-    history.push("/about-me");
   };
   return (
     <div className={styles.home}>
@@ -23,11 +20,10 @@ function Background() {
             <button className={styles.Workbtn} onClick={(e) => handleWork(e)}>
               View My Work
             </button>
-            <button
-              className={styles.Aboutbtn}
-              onClick={(e) => handleAboutMe(e)}
-            >
-              About Me
+            <button className={styles.Aboutbtn}>
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                My Resume
+              </a>
             </button>
           </div>
         </div>

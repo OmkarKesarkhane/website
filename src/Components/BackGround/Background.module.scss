@@ -121,14 +121,19 @@ $tb: 0%;
   font-family: roboto;
   letter-spacing: 1px;
   background-color: #ffffff;
-  color: $darkColor;
   box-shadow: 0px 0px 5px rgb(194, 194, 194);
-  border: 1px solid $baseColor;
+  border: 1px solid rgb(8, 241, 152);
   z-index: 2;
   border-radius: 25px;
-}
-.Aboutbtn:hover {
-  color: $baseColor;
+  color: rgb(8, 241, 152);
+
+  a {
+    color: rgb(53, 184, 133);
+  }
+
+  a:hover {
+    color: $baseColor;
+  }
 }
 
 @include Desktop() {

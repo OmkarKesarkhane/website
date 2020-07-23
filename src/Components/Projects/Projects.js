@@ -134,7 +134,7 @@ function Projects() {
             <Button size="medium" color="primary">
               <a
                 style={{ textDecoration: "none" }}
-                href="https://omkarkesarkhane.github.io/pro-organiser-app-redux/"
+                href="https://pro-organiser.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
