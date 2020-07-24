@@ -44,7 +44,7 @@ body {
   z-index: 1;
   opacity: 0;
   transform: translateX(50%);
-  transition: all 100ms ease-out;
+  transition: all 100ms linear;
 }
 
 html {

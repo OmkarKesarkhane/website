@@ -21,7 +21,7 @@
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "title title"
-      "description description"
+      "img description"
       "Ido Ido";
     justify-content: space-between;
     align-items: flex-start;
@@ -61,8 +61,22 @@
   }
 
   .imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include Desktop() {
-      grid-area: image;
+      grid-area: img;
+      justify-self: end;
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .img {
+      margin: 0 auto;
     }
   }
   .aboutTextContainer {

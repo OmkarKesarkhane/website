@@ -6,6 +6,8 @@ import responsive from "../../Images/About/responsive.png";
 import dynamic from "../../Images/About/dynamic.png";
 import testimonial from "../../Images/About/testimonial.png";
 import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
+import myPic from "../../Images/MyPic.png";
+
 // import { useHistory } from "react-router";
 
 const AboutMe = () => {
@@ -21,9 +23,9 @@ const AboutMe = () => {
         <p className={styles.line}></p>
       </div>
 
-      {/* <div className={styles.imgContainer}>
-        <img className={styles.img} alt="MyImage"></img>
-      </div> */}
+      <div className={styles.imgContainer}>
+        <img className={styles.img} width="50%" src={myPic} alt="MyImage"></img>
+      </div>
       <div className={styles.aboutTextContainer}>
         <p className={styles.aboutText}>
           I am a Front End Developer and UI/UX designer based in INDIA.
