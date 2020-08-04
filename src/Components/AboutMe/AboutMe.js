@@ -5,7 +5,7 @@ import code from "../../Images/About/code.png";
 import responsive from "../../Images/About/responsive.png";
 import dynamic from "../../Images/About/dynamic.png";
 import testimonial from "../../Images/About/testimonial.png";
-import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
+import resume from "../../Images/Omkar_Kesarkhane.pdf";
 import myPic from "../../Images/MyPic.png";
 
 // import { useHistory } from "react-router";
@@ -29,12 +29,12 @@ const AboutMe = () => {
       <div className={styles.aboutTextContainer}>
         <p className={styles.aboutText}>
           I am a Front End Developer and UI/UX designer based in INDIA.
-          <br></br>I am passionate of Interface Design and building dynamic
+          <br></br>I am passionate for Interface Design and building dynamic
           websites and Web Applications with thoughtful UI Design & converting
-          experiences into Code. I mainly focus on making websites responsive
-          and to come up with best solutions with clean & efficient code.
-          <br></br>I always want to learn & grow with upskilling myself as a
-          fullstack Javascript developer with a keen eye in design .
+          experiences into Code. I focus on making websites responsive and to
+          come up with best solutions with clean & efficient code.
+          <br></br>I want to learn & grow by upskilling myself as a fullstack
+          Javascript developer with a keen eye in design .
         </p>
         {/* <p className={styles.aboutText}>Want to know more about Me?</p> */}
         <div className={styles.btnContainer}>

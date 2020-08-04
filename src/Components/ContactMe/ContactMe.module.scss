@@ -62,7 +62,26 @@
   color: $darkColor;
 }
 
-.emailContainer {
+.emailOuter {
+  width: 200px;
+  margin: 15px 0;
+  border: 1px solid $baseColor;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .emailContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: $subhead3;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.Container {
   width: 200px;
   margin: 15px 0;
   border: 1px solid $baseColor;

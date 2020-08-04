@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Background.module.scss";
 import { useHistory } from "react-router";
-import resume from "../../Images/Omkar-Kesarkhane(Resume).pdf";
+import resume from "../../Images/Omkar_Kesarkhane.pdf";
 
 function Background() {
   const history = useHistory();
@@ -13,7 +13,7 @@ function Background() {
     <div className={styles.home}>
       <div className={styles.back}>
         <div className={styles.head}>
-          <p className={styles.hello}>Hello, I a'm</p>
+          <p className={styles.hello}>Hello, I am</p>
           <p className={styles.name}>Omkar Kesarkhane</p>
           <p className={styles.dev}>I Design and Code User Interfaces</p>
           <div className={styles.button}>
