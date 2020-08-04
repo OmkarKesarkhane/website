@@ -15,7 +15,7 @@ function ContactMe() {
         <p className={styles.letsConnect}>Lets Connect!</p>
 
         <div className={styles.emailOuter}>
-          <a href="mailto:someone@yoursite.com">
+          <a href="mailto:omkesarkhane@gmail.com">
             <div class={styles.emailContainer}>
               <span className={styles.icon}>
                 <MdEmail style={{ color: "#0e76e8" }} size={40}></MdEmail>
