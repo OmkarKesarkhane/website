@@ -28,17 +28,6 @@ function ContactMe() {
               </span>
             </div>
           </a>
-
-          {/* <div
-            style={{
-              margin: "0px",
-              padding: "0px",
-              color: "#2e2f58",
-              fontSize: "14px",
-            }}
-          >
-            omkesarkhane@gmail.com
-          </div> */}
         </div>
 
         <a

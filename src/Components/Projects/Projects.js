@@ -12,6 +12,7 @@ import zomato from "../../Images/projects/Zomato.png";
 import organiser from "../../Images/projects/pro-organiser.jpg";
 import FinancePortfolio from "../../Images/projects/FinancePortfolio.png";
 import expenseTracker from "../../Images/projects/ExpenseTracker.png";
+import FoodDeliveryApp from "../../Images/projects/FoodDevlieryApp.png";
 
 const useStyles = makeStyles({
   root: {
@@ -37,12 +38,52 @@ function Projects() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
+              image={FoodDeliveryApp}
+              title="Food Order Application"
+              style={{ height: 200 }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="h2">
+                Food Order Application
+              </Typography>
+              <Typography variant="body3" color="textSecondary" component="p">
+                stack : React, Material-ui, React-hooks, Redux, Firebase
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button size="medium" color="primary">
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://getyourfood.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </a>
+            </Button>
+            <Button size="medium" color="primary">
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/GA-Capstone-Team1/food-delivery-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Github
+              </a>
+            </Button>
+          </CardActions>
+        </Card>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
               image={zomato}
               title="Contemplative Reptile"
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                Zomato Landing Page
+                Zomato Landing Page (static)
               </Typography>
               <Typography variant="body3" color="textSecondary" component="p">
                 It is Responsive web design of Zomato Landing page.<br></br>{" "}
