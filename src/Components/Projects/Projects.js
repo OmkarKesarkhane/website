@@ -1,18 +1,18 @@
-import React from "react";
-import styles from "./Projects.module.scss";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import zomato from "../../Images/projects/Zomato.png";
-import organiser from "../../Images/projects/pro-organiser.jpg";
-import FinancePortfolio from "../../Images/projects/FinancePortfolio.png";
-import expenseTracker from "../../Images/projects/ExpenseTracker.png";
-import FoodDeliveryApp from "../../Images/projects/FoodDevlieryApp.png";
+import React from 'react';
+import styles from './Projects.module.scss';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import zomato from '../../Images/projects/Zomato.png';
+import organiser from '../../Images/projects/pro-organiser.jpg';
+import FinancePortfolio from '../../Images/projects/FinancePortfolio.png';
+import expenseTracker from '../../Images/projects/ExpenseTracker.png';
+import FoodDeliveryApp from '../../Images/projects/FoodDevlieryApp.png';
 
 const useStyles = makeStyles({
   root: {
@@ -39,35 +39,35 @@ function Projects() {
             <CardMedia
               className={classes.media}
               image={FoodDeliveryApp}
-              title="Food Order Application"
+              title='Food Order Application'
               style={{ height: 200 }}
             />
             <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant='h4' component='h2'>
                 Food Order Application
               </Typography>
-              <Typography variant="body3" color="textSecondary" component="p">
+              <Typography variant='body3' color='textSecondary' component='p'>
                 stack : React, Material-ui, React-hooks, Redux, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://getyourfood.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://getyourfood.netlify.app/'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View
               </a>
             </Button>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://github.com/GA-Capstone-Team1/food-delivery-app"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://github.com/GA-Capstone-Team1/food-delivery-app'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View on Github
               </a>
@@ -79,35 +79,35 @@ function Projects() {
             <CardMedia
               className={classes.media}
               image={zomato}
-              title="Contemplative Reptile"
+              title='Contemplative Reptile'
             />
             <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant='h4' component='h2'>
                 Zomato Landing Page (static)
               </Typography>
-              <Typography variant="body3" color="textSecondary" component="p">
-                It is Responsive web design of Zomato Landing page.<br></br>{" "}
+              <Typography variant='body3' color='textSecondary' component='p'>
+                It is Responsive web design of Zomato Landing page.<br></br>{' '}
                 stack : HTML, CSS, SASS
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://omkarkesarkhane.github.io/zomato-replica/"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://OmkarK05.github.io/zomato-replica/'
+                target='_blank'
+                rel='noopener noreferrer'
               >
-                View{" "}
+                View{' '}
               </a>
             </Button>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://github.com/OmkarKesarkhane/zomato-replica"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://github.com/OmkarK05/zomato-replica'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View on Github
               </a>
@@ -119,34 +119,34 @@ function Projects() {
             <CardMedia
               className={classes.media}
               image={FinancePortfolio}
-              title="Finance Portfolio"
+              title='Finance Portfolio'
             />
             <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant='h4' component='h2'>
                 Finance Portfolio Application
               </Typography>
-              <Typography variant="body3" color="textSecondary" component="p">
+              <Typography variant='body3' color='textSecondary' component='p'>
                 stack: React, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://omkarkesarkhane.github.io/financial-portfolio-tracker-app/"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://OmkarK05.github.io/financial-portfolio-tracker-app/'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View
               </a>
             </Button>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://github.com/OmkarKesarkhane/financial-portfolio-tracker-app"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://github.com/OmkarK05/financial-portfolio-tracker-app'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View on Github
               </a>
@@ -158,36 +158,36 @@ function Projects() {
             <CardMedia
               className={classes.media}
               image={organiser}
-              title="pro-organiser"
+              title='pro-organiser'
             />
             <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant='h4' component='h2'>
                 Pro-Organiser
               </Typography>
 
-              <Typography variant="body3" color="textSecondary" component="p">
+              <Typography variant='body3' color='textSecondary' component='p'>
                 Web App with authentication, creating, updating, deleting tasks
                 & members. <br></br>Stack : React, Redux, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://pro-organiser.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://pro-organiser.netlify.app'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View
               </a>
             </Button>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://github.com/OmkarKesarkhane/pro-organiser-app-redux"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://github.com/OmkarK05/pro-organiser-app-redux'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View on Github
               </a>
@@ -199,35 +199,35 @@ function Projects() {
             <CardMedia
               className={classes.media}
               image={expenseTracker}
-              title="Expense Tracker"
+              title='Expense Tracker'
               style={{ height: 200 }}
             />
             <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
+              <Typography gutterBottom variant='h4' component='h2'>
                 Expense Tracker Application
               </Typography>
-              <Typography variant="body3" color="textSecondary" component="p">
+              <Typography variant='body3' color='textSecondary' component='p'>
                 stack : React, React-hooks, Firebase
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://track-your-expenses.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://track-your-expenses.netlify.app'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View
               </a>
             </Button>
-            <Button size="medium" color="primary">
+            <Button size='medium' color='primary'>
               <a
-                style={{ textDecoration: "none" }}
-                href="https://github.com/OmkarKesarkhane/Expense-Tracker-React-App"
-                target="_blank"
-                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                href='https://github.com/OmkarK05/Expense-Tracker-React-App'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View on Github
               </a>

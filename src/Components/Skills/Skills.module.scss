@@ -20,7 +20,8 @@
     grid-template-rows: auto auto;
     grid-template-areas:
       "title title"
-      "code design";
+      "code code"
+      "design design";
     justify-content: space-between;
     align-items: flex-start;
   }
@@ -117,7 +118,7 @@
       font-size: $subhead2;
     }
   }
-  .code {
+  .code, .design {
     margin-top: 15px;
   }
 }
