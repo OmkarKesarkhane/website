@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Projects.module.scss';
-import { makeStyles } from '@material-ui/core/styles';
 // import zomato from '../../Images/projects/Zomato.png';
 import organiser from '../../Images/projects/pro-organiser.jpg';
 // import FinancePortfolio from '../../Images/projects/FinancePortfolio.png';
@@ -8,19 +7,7 @@ import organiser from '../../Images/projects/pro-organiser.jpg';
 import FoodDeliveryApp from '../../Images/projects/FoodDevlieryApp.png';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 300,
-    boxShadow: 3,
-    margin: 10,
-  },
-  media: {
-    height: 180,
-  },
-});
-
 function Projects() {
-  const classes = useStyles();
   const projects = [
     {
       name: 'Food Order Application',

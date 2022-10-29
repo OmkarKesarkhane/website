@@ -1,13 +1,6 @@
 import React from 'react';
 import styles from './AboutMe.module.scss';
-import code from '../../Images/About/code.png';
-import responsive from '../../Images/About/responsive.png';
-import dynamic from '../../Images/About/dynamic.png';
-import testimonial from '../../Images/About/testimonial.png';
-import resume from '../../Images/Omkar_Kesarkhane.pdf';
 import myPic from '../../Images/MyPic.png';
-
-// import { useHistory } from "react-router";
 
 const AboutMe = () => {
   return (

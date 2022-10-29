@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './ContactMe.module.scss';
-import { GrLinkedin, GrGithub } from 'react-icons/gr';
 import { MdEmail } from 'react-icons/md';
 
 function ContactMe() {
