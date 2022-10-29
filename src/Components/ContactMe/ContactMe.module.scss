@@ -1,101 +1,45 @@
-@import "../../SCSS/variables";
-@import "../../SCSS/mixins";
+@import '../../SCSS/variables';
+@import '../../SCSS/mixins';
 
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
-  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
-}
-.skillsWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: fit-content;
-  margin: 15px auto;
 
-  @include Desktop() {
-    margin-top: 25px;
-    margin-bottom: 15px;
-
-    grid-area: title;
-    justify-self: center;
-  }
-  .skills {
-    width: fit-content;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20pt;
-    color: $darkColor;
-    margin: 0;
-
-    @include Desktop() {
-      font-size: $subhead1 * 1.5;
-      font-weight: bold;
-      letter-spacing: 5px;
+.contactContainer{
+    .thankYou{
+        color: var(--text);
+        font-size: $medium;
+        line-height: 25px;
     }
-  }
-  .line {
-    width: 50%;
-    background-color: $darkColor;
-    height: 2px;
-    padding: 0;
-    margin: 0;
-  }
-}
-.letsConnect {
-  font-size: 18pt;
-  padding: 0;
-  margin: 0;
-  color: $redColor;
-  margin: 10px;
-}
-.thankYou {
-  font-size: 16pt;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  line-height: $subhead3 * 1.4;
-  color: $darkColor;
-}
 
-.emailOuter {
-  width: 200px;
-  margin: 15px 0;
-  border: 1px solid $baseColor;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    .email-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-  .emailContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: $subhead3;
-    padding: 0px;
-    margin: 0px;
-  }
-}
+        @include Desktop(){
+            display: flex;
+            justify-content: flex-start;
+        }
+        .emailOuter{
+            width: fit-content;
+            margin-top: 22px;
+            .emailContainer{
+                display: flex;
+                align-items: center;
+            }
+            .email{
+                font-size: $regular;
+                color: var(--secondary);
+                padding-left: 12px;
 
-.Container {
-  width: 200px;
-  margin: 15px 0;
-  border: 1px solid $baseColor;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+                @include Desktop(){
+                    font-size: $large;
+                }
+            }
 
-  .email {
-    font-size: $subhead3;
-    padding: 10px;
-  }
-
-  .icon {
-    padding-left: 22%;
-  }
+            &:hover{
+                .email{
+                    color: var(--primary);
+                }
+            }
+        }
+    }
 }

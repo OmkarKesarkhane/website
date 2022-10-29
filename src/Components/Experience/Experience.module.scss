@@ -1,0 +1,76 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+.experience-container{
+    color: var(--text);
+
+    .experience{
+        padding: 16px;
+        padding-left: 16px;
+        position: relative;
+        margin-left: 8px;
+
+        .circle{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            transform: translate(-24px, 6px);
+        }
+
+        .line{
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary);
+            position: absolute;
+            transform: translateX(-20px);
+            top: 0;
+        }
+
+        &:nth-child(1){
+            .line{
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+
+        &:last-child{
+            .line{
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+
+    .job-title{
+        color: var(--text);
+        padding-bottom: 4px;
+        
+        .position{
+
+            @include Desktop(){
+                font-size: $medium;
+                line-height: 25px;
+            }
+        }
+        .company{
+            color: var(--secondary);
+            font-weight: bold;
+        }
+    }
+
+    .duration{
+        padding-bottom: 4px;
+
+        @include Desktop(){
+            font-size: $small;
+            line-height: 20px;
+        }
+    }
+
+    .job-description{
+        margin-left: 24px;
+    }
+
+}

@@ -1,0 +1,42 @@
+.section-heading-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+  
+    @include Desktop(){
+       margin-bottom: 48px;
+    }
+  
+    .section-heading{
+        color: var(--primary);
+        font-size: $larger;
+        line-height: 25px;
+
+        @include Desktop(){
+            font-size: $largest;
+            line-height: 31px;
+        }
+    }
+  
+    .line{
+        width: 100px;
+        height: 1px;
+        background: var(--primary);
+        margin-left: 10px;
+
+        @include Desktop(){
+            width: 200px;
+            margin-left: 20px;
+        }
+    }
+  }
+
+  section{
+    
+    padding: 24px 0;
+
+    @include Desktop(){
+        padding: 50px 0;
+    }
+  }

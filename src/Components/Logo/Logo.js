@@ -1,64 +1,72 @@
-import React, { useContext } from "react";
-import styles from "./Logo.module.scss";
-import { AiOutlineMenu } from "react-icons/ai";
-import Header from "../Header/Header";
-import { Link } from "react-router-dom";
-import { portfolioContext } from "../../Context/context";
-import { SET_DRAWER } from "../../Context/actionTypes";
-
+import React, { useContext } from 'react';
+import styles from './Logo.module.scss';
+import { portfolioContext } from '../../Context/context';
+import { SET_DRAWER } from '../../Context/actionTypes';
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../../Images/logo1.svg';
 function Logo() {
-  const { dispatch } = useContext(portfolioContext);
+  const { state, dispatch } = useContext(portfolioContext);
+  const [routes] = useState([
+    { name: 'about-me', label: 'About me', id: '#about-me' },
+    { name: 'projects', label: 'Work', id: '#projects' },
+    { name: 'skills', label: 'Skills', id: '#skills' },
+    { name: 'contact', label: 'Contact', id: '#contact' },
+  ]);
 
   const handleClick = (e) => {
     e.preventDefault();
-
     dispatch({
       type: SET_DRAWER,
-      payload: true,
+      payload: !state.drawer,
     });
   };
 
   return (
-    <div className={styles.head}>
-      <div>
-        <Link to="/">
-          <div className={styles.logo}>
-            <p>Omkar Kesarkhane</p>
+    <div className={styles['navbar-container']}>
+      {window.innerWidth > 1024 ? (
+        <div className={styles['desktop-navbar']}>
+          <div>
+            <a href='#home' onClick={handleClick}>
+              <img alt='logo' src={logo} width='40' height='40'></img>
+            </a>
           </div>
-        </Link>
-      </div>
-      <div className={styles.linkContainer}>
-        <ul className={styles.listContainer}>
-          <li>
-            <Link style={{ textDecoration: "none" }} to="/project">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link style={{ textDecoration: "none" }} to="/about-me">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link style={{ textDecoration: "none" }} to="/skills">
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link style={{ textDecoration: "none" }} to="/contact">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className={styles.menu}>
-        <AiOutlineMenu
-          onClick={(e) => handleClick(e)}
-          className={styles.icon}
-          size={30}
-        ></AiOutlineMenu>
-      </div>
-      <Header></Header>
+          <div className={styles['links-container']}>
+            {routes.map((route) => (
+              <div key={route['name']} className={styles.link}>
+                <a href={route.id}>{route['label']}</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className={styles.drawer}>
+          <div
+            className={styles.crossContainer}
+            onClick={(e) => handleClick(e)}
+          >
+            <FaBars className='icon' />
+          </div>
+          <div
+            style={{
+              display: state.drawer ? 'block' : 'none',
+            }}
+            className={styles.sliderList}
+          >
+            <div className={styles.icon}>
+              <FaTimes onClick={(e) => handleClick(e)} />
+            </div>
+            <ul>
+              {routes &&
+                routes.map((route) => (
+                  <li key={route['name']} onClick={(e) => handleClick(e)}>
+                    <a href={route.id}>{route['label']}</a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

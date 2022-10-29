@@ -1,85 +1,79 @@
-@import "../../SCSS/variables";
-@import "../../SCSS/mixins";
-
-.head {
+.navbar-container{
   width: 100%;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.linkContainer {
-  display: none;
-  cursor: pointer;
-  justify-self: center;
-  align-self: center;
-  @include Desktop() {
-    margin: 20px;
-    display: block;
-  }
-  .listContainer li {
-    display: inline;
-    margin: 0 15px;
-    padding: 15px 15px;
-    color: $darkColor;
-    font-size: $subhead3;
+
+  .desktop-navbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: var(--light-background);
+
+    .links-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .link{
+        margin-left: 40px;
+        color: var(--text);
+
+        &:hover{
+          color: var(--primary);
+        }
+      }
+    }
   }
 
-  li:hover {
-    background-color: rgb(223, 207, 250);
-    border-radius: 25px;
-    color: white;
+  .drawer{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background: var(--background);
+
+    .crossContainer{
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      color: var(--secondary);
+    }
   }
-}
-.menu {
-  position: fixed;
-  z-index: 2;
 
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  margin: 15px;
-  // background: $baseColor;
-  transition: all 0.8s ease-in-out;
-  cursor: pointer;
-  border-radius: 10px;
-  @include Desktop() {
-    display: none;
+
+
+  .sliderList {
+    position: fixed;
+    background-color: var(--primary);
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    .icon{
+      color: var(--secondary);
+      width: 100%;
+      text-align: right;
+    }
+
+    ul{
+      list-style-type: none;
+
+      li {
+        margin: 15px 0;
+        padding-left: 5px;
+        font-size: 16px;
+        color: var(--background);
+        height: 30px;
+        border-bottom: 1px solid rgb(194, 194, 196);
+      }
+      Link {
+        text-decoration: none;
+      }
+      li:hover {
+        transform: scale(1.05);
+        color: rgb(247, 247, 247);
+      }
+    }
   }
-}
-
-.icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 0%;
-  color: $darkColor;
-  padding: 10px;
-  border-radius: 50%;
-  transition: background 1s;
-}
-.icon:hover {
-  background-color: rgb(233, 233, 233);
-  border-radius: 50%;
-  transition: all 0s;
-  opacity: 1;
-}
-
-.logo {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  margin-top: 20px;
-  width: 174px;
-  height: 40px;
-  background-color: $baseColor;
-  font-size: $subhead3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  color: #ffffff;
 }

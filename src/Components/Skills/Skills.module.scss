@@ -1,144 +1,47 @@
-@import "../../SCSS/variables";
-@import "../../SCSS/mixins";
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
 
-.skillsContainer {
-  max-width: 425px;
-  margin: 0 auto;
-  margin-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
-  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
 
-  @include Desktop() {
-    max-width: 1024px;
-    margin-bottom: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "title title"
-      "code code"
-      "design design";
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.skillsContainer{
+    .logoContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
 
-  .skillsWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 15px auto;
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin: 6px;
+            border: none;
+            background: var(--light-background);
 
-    @include Desktop() {
-      margin: 25px;
+            @include Desktop(){
+                margin: 10px;
+                padding: 8px 16px;
+                background: var(--light-background);
+            }
 
-      grid-area: title;
-      justify-self: center;
+            .image-container{
+                margin-right: 12px;
+                .img{
+                    width: auto;
+                    height: 20px;
+                    font-size: $small;
+
+                    @include Desktop(){
+                        height: 40px;
+                        font-size: $medium;
+                    }
+
+                }
+            }
+            .label {
+                color: var(--secondary);
+            }
+        }
     }
-    .skills {
-      width: fit-content;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 20pt;
-      color: $darkColor;
-      margin: 0;
-
-      @include Desktop() {
-        font-size: $subhead1 * 1.5;
-        font-weight: bold;
-        letter-spacing: 5px;
-      }
-    }
-    .line {
-      width: 50%;
-      background-color: $darkColor;
-      height: 2px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-}
-
-.logoContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-.wrapper {
-  width: 50px;
-  padding: 5px 15px;
-  background-color: rgb(255, 255, 255);
-  margin: 8px 8px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-
-  @include Desktop() {
-    margin: 10px;
-    width: 75px;
-    padding: 5px 15px;
-  }
-  p {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-
-    @include Desktop() {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  }
-  .img {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.designContainer,
-.codeContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .design,
-  .code {
-    font-size: $subhead3;
-    padding: 5px;
-    margin: 0px 0;
-    color: $redColor;
-    @include Desktop() {
-      font-size: $subhead2;
-    }
-  }
-  .code, .design {
-    margin-top: 15px;
-  }
-}
-
-.designContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @include Desktop() {
-    grid-area: design;
-  }
-}
-.codeContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include Desktop() {
-    grid-area: code;
-  }
 }

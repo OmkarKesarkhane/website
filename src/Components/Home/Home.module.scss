@@ -1,0 +1,86 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include Desktop() {
+       max-width: 1024px;
+       padding: 0;
+    }
+}
+
+.home{
+
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .head{
+        .hi{
+            color: var(--secondary);
+            font-size: $regular;
+
+            @include Desktop() {
+              font-size: $larger;
+            }
+        }
+
+        .name{
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: $largest;
+            line-height: 40px;
+            margin: 8px 0 12px 0;
+
+            @include Desktop() {
+                font-size: $huge;
+                line-height: 74px;
+                margin: 12px 0;
+            }
+        }
+
+        .dev{
+            color: var(--text);
+            font-weight: bold;
+            font-size: $largest;
+            line-height: 40px;
+
+            @include Desktop() {
+                font-size: $huge;
+                line-height: 74px;
+            }
+        }
+
+        .dev-description{
+            padding-top: 16px;
+            font-size: $medium;
+            color: var(--text);
+            line-height: 25px;
+
+            @include Desktop() {
+                font-size: $larger;
+                line-height: 30px;
+            }
+        }
+
+        .button{
+            margin-top: 32px;
+
+            @include Desktop() {
+                margin-top: 54px;
+            }
+
+            .workbtn{
+                margin-right: 12px;
+
+                @include Desktop() {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+}

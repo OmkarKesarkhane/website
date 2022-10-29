@@ -1,18 +1,12 @@
 import React from 'react';
 import styles from './Projects.module.scss';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import zomato from '../../Images/projects/Zomato.png';
+// import zomato from '../../Images/projects/Zomato.png';
 import organiser from '../../Images/projects/pro-organiser.jpg';
-import FinancePortfolio from '../../Images/projects/FinancePortfolio.png';
-import expenseTracker from '../../Images/projects/ExpenseTracker.png';
+// import FinancePortfolio from '../../Images/projects/FinancePortfolio.png';
+// import expenseTracker from '../../Images/projects/ExpenseTracker.png';
 import FoodDeliveryApp from '../../Images/projects/FoodDevlieryApp.png';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const useStyles = makeStyles({
   root: {
@@ -27,215 +21,64 @@ const useStyles = makeStyles({
 
 function Projects() {
   const classes = useStyles();
+  const projects = [
+    {
+      name: 'Food Order Application',
+      description:
+        'Pro organiser is an app where one can add tasks, assign team members to the task and track task progress. The created task can be moved/dragged between different lanes as per the progress. The created task can be moved/dragged between different lanes as per the progress The created task can be moved/dragged between different lanes as per the progress The created task can be moved/dragged between different lanes as per the progress',
+      github: 'https://github.com/GA-Capstone-Team1/food-delivery-app',
+      link: 'https://getyourfood.netlify.app/',
+      stack: ['React', ' Material-ui', 'React-hooks', 'Redux', 'Firebase'],
+      image: FoodDeliveryApp,
+    },
+    {
+      name: 'Pro-organiser (Trello Clone)',
+      description:
+        'Pro organiser is an app where one can add tasks, assign team members to the task and track tasks progress. The created task can be moved/dragged between different lanes as per the progress.',
+      github: 'https://github.com/OmkarK05/pro-organiser-app-redux',
+      link: 'https://pro-organiser.netlify.app',
+      stack: ['React', 'React-hooks', 'Redux', 'Firebase'],
+      image: organiser,
+    },
+  ];
   return (
-    <div>
-      <div className={styles.skillsWrapper}>
-        <p className={styles.skills}>Projects</p>
-        <p className={styles.line}></p>
+    <section id='projects'>
+      <div className='section-heading-container'>
+        <p className='section-heading'>Side Projects</p>
+        <div className='line'></div>
       </div>
-      <div className={styles.desktop}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={FoodDeliveryApp}
-              title='Food Order Application'
-              style={{ height: 200 }}
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h4' component='h2'>
-                Food Order Application
-              </Typography>
-              <Typography variant='body3' color='textSecondary' component='p'>
-                stack : React, Material-ui, React-hooks, Redux, Firebase
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://getyourfood.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View
-              </a>
-            </Button>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://github.com/GA-Capstone-Team1/food-delivery-app'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View on Github
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={zomato}
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h4' component='h2'>
-                Zomato Landing Page (static)
-              </Typography>
-              <Typography variant='body3' color='textSecondary' component='p'>
-                It is Responsive web design of Zomato Landing page.<br></br>{' '}
-                stack : HTML, CSS, SASS
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://OmkarK05.github.io/zomato-replica/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View{' '}
-              </a>
-            </Button>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://github.com/OmkarK05/zomato-replica'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View on Github
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={FinancePortfolio}
-              title='Finance Portfolio'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h4' component='h2'>
-                Finance Portfolio Application
-              </Typography>
-              <Typography variant='body3' color='textSecondary' component='p'>
-                stack: React, Firebase
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://OmkarK05.github.io/financial-portfolio-tracker-app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View
-              </a>
-            </Button>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://github.com/OmkarK05/financial-portfolio-tracker-app'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View on Github
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={organiser}
-              title='pro-organiser'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h4' component='h2'>
-                Pro-Organiser
-              </Typography>
-
-              <Typography variant='body3' color='textSecondary' component='p'>
-                Web App with authentication, creating, updating, deleting tasks
-                & members. <br></br>Stack : React, Redux, Firebase
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://pro-organiser.netlify.app'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View
-              </a>
-            </Button>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://github.com/OmkarK05/pro-organiser-app-redux'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View on Github
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={expenseTracker}
-              title='Expense Tracker'
-              style={{ height: 200 }}
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h4' component='h2'>
-                Expense Tracker Application
-              </Typography>
-              <Typography variant='body3' color='textSecondary' component='p'>
-                stack : React, React-hooks, Firebase
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://track-your-expenses.netlify.app'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View
-              </a>
-            </Button>
-            <Button size='medium' color='primary'>
-              <a
-                style={{ textDecoration: 'none' }}
-                href='https://github.com/OmkarK05/Expense-Tracker-React-App'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View on Github
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
+      <div className={styles['projects-container']}>
+        {projects.map((project) => (
+          <div className={styles['project-container']}>
+            <div className={styles['project-details']}>
+              <div className={styles['project-header']}>
+                <div className={styles.name}>{project['name']}</div>
+                <div className={styles.description}>
+                  {project['description']}
+                </div>
+              </div>
+              <div className={styles['project-footer']}>
+                <div className={styles.stack}>
+                  <span className={styles.description}>Stack:</span>{' '}
+                  {project['stack'].join(', ')}
+                </div>
+                <div className={styles.links}>
+                  <div className={styles.link}>
+                    <FaGithub size='26' title='Github' />
+                  </div>
+                  <div className={styles.link}>
+                    <FaExternalLinkAlt size='22' title='View Project' />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles['project-image']}>
+              <img alt={project['name']} src={project['image']} />
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
 

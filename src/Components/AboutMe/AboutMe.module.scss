@@ -1,213 +1,67 @@
-@import "../../SCSS//mixins";
-@import "../../SCSS//variables";
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
 
-.aboutContainer {
-  max-width: 425px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  // background: url("../../Images/topBlue.png") top right/ 60% no-repeat,
-  //   url("../../Images/leftBlue.png") 0% 20% / 30% no-repeat;
-
-  @include Desktop() {
-    margin-top: 20px;
-    max-width: 1024px;
-    margin-bottom: 0%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "title title"
-      "img description"
-      "Ido Ido";
-    justify-content: space-between;
-    align-items: flex-start;
-    overflow: auto;
-  }
-
-  .skillsWrapper {
+.aboutContainer{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 15px auto;
+    flex-wrap: wrap;
 
-    @include Desktop() {
-      grid-area: title;
-      justify-self: center;
-    }
-    .skills {
-      width: fit-content;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 20pt;
-      color: $darkColor;
+    .skillsWrapper{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 16px;
 
-      @include Desktop() {
-        font-size: $subhead1 * 1.5;
-        font-weight: bold;
-        letter-spacing: 5px;
-      }
-    }
-    .line {
-      width: 40%;
-      background-color: $darkColor;
-      height: 2px;
-      padding: 0;
-      margin: 0;
-    }
-  }
+        @include Desktop(){
+           margin-bottom: 48px;
+        }
 
-  .imgContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @include Desktop() {
-      grid-area: img;
-      justify-self: end;
-      align-self: flex-end;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
+        .skills{
+            color: var(--primary);
+            @include Desktop(){
+                font-size: $largest;
+                line-height: 31px;
+            }
+        }
+
+        .line{
+            width: 200px;
+            height: 1px;
+            background: var(--primary);
+            margin-left: 20px;
+        }
     }
 
-    .img {
-      margin: 0 auto;
-    }
-  }
-  .aboutTextContainer {
-    padding: 15px;
+    .imgContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 24px;
 
-    @include Desktop() {
-      grid-area: description;
-      text-align: left;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      align-items: flex-start;
+        @include Desktop(){
+            width: 50%;
+            padding-bottom: 0;
+        }
     }
 
-    .aboutText {
-      font-size: 1.6rem;
-      line-height: $subhead3 * 1.4;
-      color: $darkColor;
+    .aboutTextContainer{
+        width: 100%;
+
+        @include Desktop(){
+            width: 50%;
+        }
+
+        .aboutText{
+            color: var(--text);
+            font-size: $regular;
+            line-height: 24px;
+
+            @include Desktop(){
+                font-size: $medium;
+                line-height: 30px;
+            }
+        }
+
     }
-  }
-}
-.whatIDoContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  @include Desktop() {
-    grid-area: Ido;
-    // margin-top: 25px;
-  }
-
-  .Ido {
-    font-size: $subhead2;
-    padding: 15px 0 10px 0;
-    margin: 0;
-    color: $darkColor;
-    margin-top: 35px;
-  }
-}
-.whatIDoWrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  grid-area: Ido;
-  justify-content: center;
-  align-items: flex-start;
-
-  .wrapper {
-    width: 20%;
-    height: 160px;
-    padding: 5px 15px;
-    background-color: rgb(255, 255, 255);
-    margin: 8px 8px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-
-    @include Desktop() {
-      width: 14%;
-      height: 180px;
-      margin: 10px;
-      padding: 5px 15px;
-    }
-    p {
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
-      font-weight: 300;
-      padding: 5px;
-      line-height: 1rem * 1.4;
-      margin: 0;
-      @include Desktop() {
-        font-size: 1.5rem;
-        text-align: center;
-        line-height: 1.5rem * 1.4;
-      }
-    }
-    .img {
-      width: 100%;
-      display: block;
-      margin: 0 auto;
-      @include Desktop() {
-        width: 60%;
-      }
-    }
-  }
-}
-.btnContainer {
-  padding-top: 30px;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  .resumebtn,
-  .contactbtn {
-    justify-self: flex-start;
-    align-self: flex-start;
-    width: 130px;
-    height: 45px;
-    font-size: 1.6rem;
-    font-family: roboto;
-    letter-spacing: 1px;
-    background-color: transparent;
-    color: $darkColor;
-    box-shadow: 0px 0px 10px rgb(194, 194, 194);
-    border: none;
-    z-index: 2;
-    border-radius: 25px;
-    background-image: linear-gradient(
-      to bottom,
-      rgb(8, 241, 152),
-      rgb(48, 220, 250)
-    );
-    margin-right: 15px;
-    @include Desktop() {
-      width: 150px;
-      height: 50px;
-    }
-  }
-
-  .resumebtn:hover {
-    background-image: linear-gradient($baseColor, $baseColor);
-    color: #ffffff;
-  }
-  .contactbtn:hover {
-    background-image: linear-gradient($baseColor, $baseColor);
-    color: #ffffff;
-  }
-}
-
-a {
-  text-decoration: none;
 }
