@@ -13,13 +13,13 @@
 }
 
 .home{
-
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .head{
+
         .hi{
             color: var(--secondary);
             font-size: $regular;
@@ -72,6 +72,16 @@
 
             @include Desktop() {
                 margin-top: 54px;
+            }
+
+            button{
+                font-size: $small;
+                line-height: 20px;
+
+                @include Desktop() {
+                    font-size: $medium;
+                    line-height: 22px;
+                }
             }
 
             .workbtn{

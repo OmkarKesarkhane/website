@@ -1,3 +1,5 @@
+@import '../../SCSS/variables';
+
 .navbar-container{
   width: 100%;
 
@@ -7,7 +9,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    background: var(--light-background);
+    position: fixed;
+    background-color: var(--background);
+    width: 100%;
+    z-index: 999;
+    top: 0;
 
     .links-container{
       display: flex;
@@ -28,15 +34,22 @@
   .drawer{
     padding: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 100%;
     background: var(--background);
+    position: fixed;
+    z-index: 999;
+    top: 0;
 
     .crossContainer{
-      display: flex;
-      flex-direction: column;
-      width: fit-content;
       color: var(--secondary);
+      width: 100%;
+      text-align: right;
+      cursor: pointer;
+
+      &:hover{
+        color: var(--primary);
+      }
     }
   }
 
@@ -44,16 +57,24 @@
 
   .sliderList {
     position: fixed;
-    background-color: var(--primary);
-    width: 50%;
+    background-color: var(--light-background);
+    width: 70%;
     height: 100%;
-    left: 0;
+    right: 0;
     top: 0;
+    padding: 16px 24px;
+    box-shadow: 0px 0px 18px 1px #393a3d;
+    z-index: 999;
 
     .icon{
       color: var(--secondary);
       width: 100%;
       text-align: right;
+      cursor: pointer;
+
+      &:hover{
+        color: var(--primary);
+      }
     }
 
     ul{
@@ -63,16 +84,12 @@
         margin: 15px 0;
         padding-left: 5px;
         font-size: 16px;
-        color: var(--background);
+        color: var(--secondary);
         height: 30px;
-        border-bottom: 1px solid rgb(194, 194, 196);
-      }
-      Link {
-        text-decoration: none;
-      }
-      li:hover {
-        transform: scale(1.05);
-        color: rgb(247, 247, 247);
+
+        &:hover {
+          color: var(--primary) !important;
+        }
       }
     }
   }

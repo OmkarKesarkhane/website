@@ -9,8 +9,9 @@ function Logo() {
   const { state, dispatch } = useContext(portfolioContext);
   const [routes] = useState([
     { name: 'about-me', label: 'About me', id: '#about-me' },
-    { name: 'projects', label: 'Work', id: '#projects' },
+    { name: 'experience', label: 'Experience', id: '#experience' },
     { name: 'skills', label: 'Skills', id: '#skills' },
+    { name: 'projects', label: 'Work', id: '#projects' },
     { name: 'contact', label: 'Contact', id: '#contact' },
   ]);
 
@@ -45,7 +46,7 @@ function Logo() {
             className={styles.crossContainer}
             onClick={(e) => handleClick(e)}
           >
-            <FaBars className='icon' />
+            <FaBars className='icon' size={20} />
           </div>
           <div
             style={{
@@ -54,7 +55,7 @@ function Logo() {
             className={styles.sliderList}
           >
             <div className={styles.icon}>
-              <FaTimes onClick={(e) => handleClick(e)} />
+              <FaTimes size={20} onClick={(e) => handleClick(e)} />
             </div>
             <ul>
               {routes &&
