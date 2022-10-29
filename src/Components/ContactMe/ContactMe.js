@@ -18,7 +18,7 @@ function ContactMe() {
         <div className={styles['email-container']}>
           <button className={styles.emailOuter}>
             <a href='mailto:omkesarkhane@gmail.com'>
-              <div class={styles.emailContainer}>
+              <div className={styles.emailContainer}>
                 <MdEmail style={{ color: '#0e76e8' }} size={25}></MdEmail>
                 <span className={styles.email}>Email me</span>
               </div>

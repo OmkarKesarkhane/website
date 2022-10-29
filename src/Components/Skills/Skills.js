@@ -51,7 +51,7 @@ function Skills() {
       <div className={styles.codeContainer}>
         <div className={styles.logoContainer}>
           {skills['code'].map((skill) => (
-            <div className={styles.wrapper}>
+            <div key={skill['label']} className={styles.wrapper}>
               <div className={styles['image-container']}>
                 <img className={styles.img} src={skill['img']} alt='HtmlLogo' />
               </div>
@@ -63,7 +63,7 @@ function Skills() {
       <div className={styles.codeContainer}>
         <div className={styles.logoContainer}>
           {skills['design'].map((skill) => (
-            <div className={styles.wrapper}>
+            <div key={skill['label']} className={styles.wrapper}>
               <div className={styles['image-container']}>
                 <img className={styles.img} src={skill['img']} alt='HtmlLogo' />
               </div>

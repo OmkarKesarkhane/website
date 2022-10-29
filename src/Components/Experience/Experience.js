@@ -43,7 +43,7 @@ function Header({ routes }) {
       </div>
       <div className={styles['experience-container']}>
         {experiences.map((experience) => (
-          <div className={styles.experience}>
+          <div key={experience['company']} className={styles.experience}>
             <div className={styles.circle} />
             <div className={styles.line} />
             <div className={styles['job-title']}>
@@ -53,7 +53,7 @@ function Header({ routes }) {
             <p className={styles['duration']}>{experience['started']}</p>
             <ul className={styles['job-description']}>
               {experience['job_description'].map((description) => (
-                <li>{description}</li>
+                <li key={description}>{description}</li>
               ))}
             </ul>
           </div>

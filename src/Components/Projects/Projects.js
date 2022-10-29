@@ -36,7 +36,7 @@ function Projects() {
       </div>
       <div className={styles['projects-container']}>
         {projects.map((project) => (
-          <div className={styles['project-container']}>
+          <div key={project['name']} className={styles['project-container']}>
             <div className={styles['project-details']}>
               <div className={styles['project-header']}>
                 <div className={styles.name}>{project['name']}</div>
