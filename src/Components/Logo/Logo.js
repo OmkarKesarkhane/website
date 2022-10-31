@@ -15,8 +15,7 @@ function Logo() {
     { name: 'contact', label: 'Contact', id: '#contact' },
   ]);
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     dispatch({
       type: SET_DRAWER,
       payload: !state.drawer,
@@ -27,8 +26,8 @@ function Logo() {
     <div className={styles['navbar-container']}>
       {window.innerWidth > 1024 ? (
         <div className={styles['desktop-navbar']}>
-          <div>
-            <a href='#home' onClick={handleClick}>
+          <div style={{ 'padding-top': '10px' }}>
+            <a href='#home'>
               <img alt='logo' src={logo} width='40' height='40'></img>
             </a>
           </div>
@@ -42,11 +41,13 @@ function Logo() {
         </div>
       ) : (
         <div className={styles.drawer}>
-          <div
-            className={styles.crossContainer}
-            onClick={(e) => handleClick(e)}
-          >
-            <FaBars className='icon' size={20} />
+          <div>
+            <a href='#home'>
+              <img alt='logo' src={logo} width='35' height='35'></img>
+            </a>
+          </div>
+          <div className={styles.crossContainer} onClick={handleClick}>
+            <FaBars className='icon' size={25} />
           </div>
           <div
             style={{
@@ -55,12 +56,12 @@ function Logo() {
             className={styles.sliderList}
           >
             <div className={styles.icon}>
-              <FaTimes size={20} onClick={(e) => handleClick(e)} />
+              <FaTimes size={20} onClick={handleClick} />
             </div>
             <ul>
               {routes &&
                 routes.map((route) => (
-                  <li key={route['name']} onClick={(e) => handleClick(e)}>
+                  <li key={route['name']} onClick={handleClick}>
                     <a href={route.id}>{route['label']}</a>
                   </li>
                 ))}

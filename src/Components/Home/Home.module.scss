@@ -10,6 +10,66 @@
        max-width: 1024px;
        padding: 0;
     }
+
+    .social-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 16px;
+
+        @include Desktop(){
+            position: fixed;
+            bottom: calc((100vh / 2 ) - 145px);
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: px;
+        }
+
+        .icon{
+            color: var(--secondary);
+            margin: 0 8px;
+            cursor: pointer;
+
+            &:hover{
+                color: var(--primary);
+            }
+
+            @include Desktop(){
+                margin: 8px 0;
+            }
+        }
+
+        .line{
+            height: 1px;
+            width: 60px;
+            margin: 0 8px;
+            background-color: var(--secondary);
+
+            @include Desktop(){
+                height: 60px;
+                width: 1px;
+                margin: 8px 0;
+            }
+        }
+
+    }
+
+    .developer{
+        color: var(--secondary);
+        padding-bottom: 32px;
+        cursor: pointer;
+        text-align: center;
+        font-size: $smaller;
+        
+        &:hover{
+            color: var(--primary);
+        }
+
+        @include Desktop(){
+            font-size: $regular;
+        }
+    }
 }
 
 .home{

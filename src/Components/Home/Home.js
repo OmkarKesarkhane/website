@@ -6,6 +6,8 @@ import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
 import ContactMe from '../ContactMe/ContactMe';
 import Experience from '../Experience/Experience';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 function Background() {
   return (
@@ -35,6 +37,33 @@ function Background() {
       <Experience></Experience>
       <Projects></Projects>
       <ContactMe></ContactMe>
+
+      <div className={styles['social-links']}>
+        <div className={styles.line} />
+        <a
+          href='https://github.com/OmkarK05'
+          target='_blank'
+          rel='noopener noreferrer'
+          title='Github'
+        >
+          <FaGithub className={styles.icon} size={25} />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/omkar-kesarkhane-ba5611186/'
+          target='_blank'
+          rel='noopener noreferrer'
+          title='LinkedIn'
+        >
+          <FaLinkedin className={styles.icon} size={25} />
+        </a>
+        <a href='mailto:omkesarkhane@gmail.com' title='Email me'>
+          <MdEmail className={styles.icon} size={25} />
+        </a>
+        <div className={styles.line} />
+      </div>
+      <div className={styles.developer}>
+        Designed and developed by Omkar Kesarkhane
+      </div>
     </div>
   );
 }
