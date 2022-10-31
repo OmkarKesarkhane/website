@@ -16,14 +16,16 @@ function Background() {
         <div className={styles.head}>
           <p className={styles.hi}>Hi, I am</p>
           <p className={styles.name}>Omkar Kesarkhane</p>
-          <p className={styles.dev}>I build frontends for the web apps.</p>
+          <p className={styles.dev}>I build Web Applications.</p>
           <p className={styles['dev-description']}>
-            I'm frontend engineer with experince in building scalable and
-            maintainable web applications with great asthetics and user
-            experince.
+            I'm software engineer specialized in frontend development with
+            experince in building scalable and maintainable web applications
+            with great asthetics and user experince.
           </p>
           <div className={styles.button}>
-            <button className={styles.workbtn}>View My Work</button>
+            <a href='#projects'>
+              <button className={styles.workbtn}>View My Work</button>
+            </a>
             <button>
               <a href={resume} target='_blank' rel='noopener noreferrer'>
                 My Resume
